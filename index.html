@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OmniPRO | The Immutable Proof of Performance Ledger</title>
+  <meta name="description" content="OmniPRO bridges live venues, talent buyers, and artists to PROs using verified IPI, ISWC, and DDEX metadata on an immutable blockchain ledger.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            brand: {
+              900: '#05070a',
+              800: '#0b1017',
+              700: '#131b26',
+              600: '#1d2939',
+              accent: '#3b82f6',
+              accentLight: '#60a5fa',
+              border: '#1f293d'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #05070a;
+      color: #e2e8f0;
+      font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    }
+    .grid-bg {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    }
+    .glass-panel {
+      background: rgba(11, 16, 23, 0.85);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col font-sans antialiased selection:bg-blue-600 selection:text-white">
+
+  <!-- Navigation -->
+  <header class="border-b border-brand-border/60 sticky top-0 z-50 glass-panel">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-lg bg-blue-600/10 border border-blue-500/30 flex items-center justify-center">
+          <svg class="w-5 h-5 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+          </svg>
+        </div>
+        <div>
+          <span class="text-xl font-bold tracking-tight text-white">Omni<span class="text-blue-400">PRO</span></span>
+          <span class="text-[10px] font-mono tracking-widest uppercase ml-2 px-2 py-0.5 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20">Protocol v1.0</span>
+        </div>
+      </div>
+      
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+        <a href="#mission" class="hover:text-white transition">The Mission</a>
+        <a href="#oracle" class="hover:text-white transition">Proof of Performance</a>
+        <a href="#ecosystem" class="hover:text-white transition">Ecosystem</a>
+        <a href="#metadata" class="hover:text-white transition">Data Standards</a>
+        <a href="/pop-oracle" class="text-blue-400 hover:text-blue-300 transition font-mono text-xs flex items-center space-x-1">
+          <span>Live Simulator</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+        </a>
+      </nav>
+
+      <div class="flex items-center space-x-4">
+        <a href="#join" class="px-5 py-2.5 text-xs font-semibold rounded-md bg-white text-brand-900 hover:bg-slate-200 transition shadow-sm">
+          Access Pilot Node
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative pt-24 pb-20 overflow-hidden grid-bg border-b border-brand-border/60">
+    <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full border border-blue-500/20 bg-blue-500/5 text-blue-400 text-xs font-mono mb-8">
+        <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+        <span>Live Music Royalty Infrastructure</span>
+      </div>
+
+      <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-white leading-[1.1] max-w-4xl mx-auto">
+        The Immutable Ledger for <br/> <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Live Performance Royalties.</span>
+      </h1>
+      
+      <p class="mt-8 text-lg text-slate-400 leading-relaxed max-w-2xl mx-auto">
+        A free, participatory infrastructure bridging venues, talent buyers, and artists to Performance Rights Organizations (PROs). Leveraging DDEX and IPI standards, OmniPRO replaces manual reporting with ambient acoustic verification and dual-party cryptographic attestation.
+      </p>
+
+      <div class="mt-10 flex flex-wrap justify-center items-center gap-4">
+        <a href="#join" class="px-8 py-3.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm transition shadow-lg shadow-blue-600/20">
+          Register Your Catalog or Venue
+        </a>
+        <a href="/pop-oracle" class="px-6 py-3.5 rounded-lg border border-brand-border hover:bg-brand-800 text-slate-300 font-medium text-sm transition">
+          Launch PoP Simulator
+        </a>
+      </div>
+
+      <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto pt-8 border-t border-brand-border/60 text-left">
+        <div>
+          <div class="text-2xl font-bold text-white font-mono">100%</div>
+          <div class="text-xs text-slate-400 mt-1">Publisher & Writer Split Integrity</div>
+        </div>
+        <div>
+          <div class="text-2xl font-bold text-white font-mono">0.0s</div>
+          <div class="text-xs text-slate-400 mt-1">Manual Form Transcription</div>
+        </div>
+        <div>
+          <div class="text-2xl font-bold text-white font-mono">ZK-Proof</div>
+          <div class="text-xs text-slate-400 mt-1">Venue POS Financial Privacy</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Friction Point -->
+  <section id="mission" class="py-24 border-b border-brand-border/60 bg-brand-800/40">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <h2 class="text-xs font-mono uppercase tracking-widest text-blue-400">The Problem Space</h2>
+          <h3 class="text-3xl font-bold tracking-tight text-white mt-3">
+            Closing the "Black Box" of Unclaimed Royalties
+          </h3>
+          <p class="text-slate-400 mt-5 leading-relaxed text-sm">
+            Live public performance royalties remain bottlenecked by analog self-reporting and statistical proxy sampling. When canonical metadata—such as ISRC, ISWC, and IPI codes—is missing or misattributed, royalties sit in unallocated holding pools for 2 to 3 years before forfeiture.
+          </p>
+          <p class="text-slate-400 mt-4 leading-relaxed text-sm">
+            OmniPRO establishes an immutable, transparent framework that locks in data discipline at the point of performance, guaranteeing working creators receive their statutory earnings.
+          </p>
+        </div>
+        
+        <div class="glass-panel p-8 rounded-2xl border border-brand-border shadow-2xl">
+          <div class="space-y-6">
+            <div class="flex items-start space-x-4">
+              <div class="w-10 h-10 rounded-lg bg-red-500/10 border border-red-500/20 flex items-center justify-center text-red-400 font-bold font-mono">1</div>
+              <div>
+                <h4 class="text-white font-semibold">Missing Canonical Identifiers</h4>
+                <p class="text-xs text-slate-400 mt-1">If a single co-writer's IPI number is omitted on paper forms, distribution is indefinitely frozen.</p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-4">
+              <div class="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 font-bold font-mono">2</div>
+              <div>
+                <h4 class="text-white font-semibold">Self-Reporting Friction</h4>
+                <p class="text-xs text-slate-400 mt-1">Artists keying manual setlists weeks post-show face strict deadlines and transcription rejections.</p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-4">
+              <div class="w-10 h-10 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 font-bold font-mono">3</div>
+              <div>
+                <h4 class="text-white font-semibold">Venue Financial Privacy</h4>
+                <p class="text-xs text-slate-400 mt-1">Room owners resist audits requiring them to expose sensitive POS beverage or door margins.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proof of Performance Oracle -->
+  <section id="oracle" class="py-24 border-b border-brand-border/60">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h2 class="text-xs font-mono uppercase tracking-widest text-blue-400">The Solution</h2>
+      <h3 class="text-3xl font-bold tracking-tight text-white mt-3">
+        The Proof of Performance (PoP) Architecture
+      </h3>
+      <p class="text-slate-400 mt-4 leading-relaxed max-w-2xl mx-auto text-sm">
+        Smart contracts convert live event telemetry into an immutable cryptographic claim, establishing a single source of truth for PROs and rights administrators.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+        <div class="p-8 rounded-xl bg-brand-800/50 border border-brand-border text-left">
+          <div class="text-blue-400 font-mono text-xs mb-2">STAGE 01</div>
+          <h4 class="text-lg font-semibold text-white">Ambient Telemetry</h4>
+          <p class="text-sm text-slate-400 mt-3 leading-relaxed">
+            Soundboard audio recognition matches performed works against reference databases, pre-flighting track sequences against Songview registries in real time.
+          </p>
+        </div>
+        <div class="p-8 rounded-xl bg-brand-800/50 border border-brand-border text-left">
+          <div class="text-blue-400 font-mono text-xs mb-2">STAGE 02</div>
+          <h4 class="text-lg font-semibold text-white">Dual-Party Handshake</h4>
+          <p class="text-sm text-slate-400 mt-3 leading-relaxed">
+            The performer and venue manager tap NFC devices or scan mobile QR codes to co-sign the setlist, establishing an unalterable multi-signature performance proof.
+          </p>
+        </div>
+        <div class="p-8 rounded-xl bg-brand-800/50 border border-brand-border text-left">
+          <div class="text-blue-400 font-mono text-xs mb-2">STAGE 03</div>
+          <h4 class="text-lg font-semibold text-white">Automated DDEX Ingestion</h4>
+          <p class="text-sm text-slate-400 mt-3 leading-relaxed">
+            Verified performance data converts directly into CWR and DDEX ERN 4.3 payloads, feeding ASCAP OnStage, BMI Live, Songtrust, and Kobalt portals.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Collaborative Ecosystem -->
+  <section id="ecosystem" class="py-24 border-b border-brand-border/60 bg-brand-800/20">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="mb-16">
+        <h2 class="text-xs font-mono uppercase tracking-widest text-blue-400">Collaboration Over Disruption</h2>
+        <h3 class="text-3xl font-bold tracking-tight text-white mt-3">
+          Strengthening Industry Gatekeepers
+        </h3>
+        <p class="text-slate-400 mt-2 text-sm">OmniPRO does not collect licensing fees or manage catalogs—it acts as the authoritative verification bridge.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-8 rounded-2xl glass-panel border border-brand-border">
+          <span class="px-2.5 py-1 rounded bg-blue-500/10 text-blue-400 font-mono text-xs font-semibold">FOR ARTISTS</span>
+          <h4 class="text-xl font-bold text-white mt-4">Sovereignty & Splits</h4>
+          <p class="text-sm text-slate-400 mt-3 leading-relaxed">
+            Lock in your statutory 50% writer's share directly to your authenticated wallet. Ensure every live performance translates to timely performance credits.
+          </p>
+        </div>
+
+        <div class="p-8 rounded-2xl glass-panel border border-brand-border">
+          <span class="px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-400 font-mono text-xs font-semibold">FOR VENUES</span>
+          <h4 class="text-xl font-bold text-white mt-4">Zero-Knowledge Privacy</h4>
+          <p class="text-sm text-slate-400 mt-3 leading-relaxed">
+            Prove active licensing and set fulfillment without publishing sensitive bar sales, ticket gross, or private margins to any external database.
+          </p>
+        </div>
+
+        <div class="p-8 rounded-2xl glass-panel border border-brand-border">
+          <span class="px-2.5 py-1 rounded bg-purple-500/10 text-purple-400 font-mono text-xs font-semibold">FOR PROs & ADMINS</span>
+          <h4 class="text-xl font-bold text-white mt-4">Clean Data Ingestion</h4>
+          <p class="text-sm text-slate-400 mt-3 leading-relaxed">
+            Eliminate black-box dispute overhead with audit-ready, cryptographically verified setlists formatted natively for CWR and DDEX ingestion pipelines.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DDEX & Standards Payload -->
+  <section id="metadata" class="py-24 border-b border-brand-border/60">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-5">
+          <h2 class="text-xs font-mono uppercase tracking-widest text-blue-400">Data Discipline</h2>
+          <h3 class="text-3xl font-bold tracking-tight text-white mt-3">
+            Speaking the Industry's Language
+          </h3>
+          <p class="text-slate-400 mt-4 text-sm leading-relaxed">
+            Clean data is the foundation of royalty settlement. OmniPRO binds universal industry identifiers at the point of live capture to ensure zero friction during society intake.
+          </p>
+
+          <div class="mt-6 space-y-3 font-mono text-xs text-slate-300">
+            <div class="flex items-center space-x-2">
+              <span class="text-blue-400">✔</span>
+              <span><strong>IPI:</strong> Interested Party Information</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <span class="text-blue-400">✔</span>
+              <span><strong>ISWC:</strong> International Standard Musical Work Code</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <span class="text-blue-400">✔</span>
+              <span><strong>DDEX ERN 4.3:</strong> Global Electronic Release Notification</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7">
+          <div class="rounded-xl bg-brand-900 border border-brand-border p-6 font-mono text-xs overflow-x-auto shadow-2xl text-slate-300">
+            <div class="text-slate-400 pb-3 border-b border-brand-border flex justify-between items-center text-[11px]">
+              <span>DDEX-MEAD // VERIFIED POP CERTIFICATE</span>
+              <span class="text-emerald-400">ATTESTED</span>
+            </div>
+<pre class="mt-4 text-[11px] leading-relaxed">
+{
+  <span class="text-blue-400">"omniProVersion"</span>: <span class="text-emerald-300">"1.0.0"</span>,
+  <span class="text-blue-400">"eventSummary"</span>: {
+    <span class="text-blue-400">"venue"</span>: <span class="text-emerald-300">"Evanston SPACE"</span>,
+    <span class="text-blue-400">"proBlanketLicenseId"</span>: <span class="text-emerald-300">"ASCAP-401928 / BMI-91823"</span>,
+    <span class="text-blue-400">"totalDurationSeconds"</span>: <span class="text-amber-300">3600</span>,
+    <span class="text-blue-400">"trackCount"</span>: <span class="text-amber-300">8</span>,
+    <span class="text-blue-400">"attestationStatus"</span>: <span class="text-emerald-300">"DUAL_SIGNED_VERIFIED"</span>
+  },
+  <span class="text-blue-400">"trackMetadata"</span>: [
+    {
+      <span class="text-blue-400">"sequence"</span>: <span class="text-amber-300">1</span>,
+      <span class="text-blue-400">"title"</span>: <span class="text-emerald-300">"Midnight Movement"</span>,
+      <span class="text-blue-400">"iswc"</span>: <span class="text-emerald-300">"T-034.523.901-1"</span>,
+      <span class="text-blue-400">"isrc"</span>: <span class="text-emerald-300">"US-S1Z-26-00001"</span>,
+      <span class="text-blue-400">"royaltySplits"</span>: [
+        { <span class="text-blue-400">"ipi"</span>: <span class="text-emerald-300">"00491827361"</span>, <span class="text-blue-400">"role"</span>: <span class="text-emerald-300">"WRITER"</span>, <span class="text-blue-400">"share"</span>: <span class="text-amber-300">50.0</span> },
+        { <span class="text-blue-400">"ipi"</span>: <span class="text-emerald-300">"00827163829"</span>, <span class="text-blue-400">"role"</span>: <span class="text-emerald-300">"PUBLISHER"</span>, <span class="text-blue-400">"share"</span>: <span class="text-amber-300">50.0</span> }
+      ]
+    }
+  ]
+}
+</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Join / Early Access -->
+  <section id="join" class="py-24 relative">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h2 class="text-xs font-mono uppercase tracking-widest text-blue-400">Participate</h2>
+      <h3 class="text-3xl font-bold tracking-tight text-white mt-2">
+        Access the OmniPRO Verification Sandbox
+      </h3>
+      <p class="text-slate-400 mt-4 text-sm leading-relaxed">
+        Register your artist catalog, venue node, or publishing entity to participate in upcoming live verification pilots across Chicago and regional showcases.
+      </p>
+
+      <form class="mt-10 glass-panel p-8 rounded-2xl border border-brand-border space-y-5 text-left max-w-xl mx-auto">
+        <div>
+          <label class="block text-xs font-mono text-slate-300 mb-2">FULL NAME / ENTITY REPRESENTATIVE</label>
+          <input type="text" required placeholder="Jane Doe / Evanston SPACE" class="w-full px-4 py-3 rounded-lg bg-brand-900 border border-brand-border text-white text-sm focus:outline-none focus:border-blue-500">
+        </div>
+        <div>
+          <label class="block text-xs font-mono text-slate-300 mb-2">INSTITUTIONAL EMAIL</label>
+          <input type="email" required placeholder="contact@entity.com" class="w-full px-4 py-3 rounded-lg bg-brand-900 border border-brand-border text-white text-sm focus:outline-none focus:border-blue-500">
+        </div>
+        <div>
+          <label class="block text-xs font-mono text-slate-300 mb-2">ORGANIZATION PROFILE</label>
+          <select class="w-full px-4 py-3 rounded-lg bg-brand-900 border border-brand-border text-slate-300 text-sm focus:outline-none focus:border-blue-500">
+            <option>Performing Artist / Songwriter</option>
+            <option>Live Music Venue Owner / Talent Buyer</option>
+            <option>Publishing Administrator (Songtrust, Kobalt, Indie)</option>
+            <option>PRO / CMO Representative (ASCAP, BMI, SESAC, MLC)</option>
+          </select>
+        </div>
+        <button type="submit" class="w-full py-3.5 mt-2 rounded-lg bg-white text-brand-900 hover:bg-slate-200 font-semibold text-sm transition shadow-sm">
+          Request Pilot Access
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-brand-border/60 bg-brand-900 py-10 mt-auto">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between text-xs text-slate-500">
+      <div class="flex items-center space-x-3 mb-4 md:mb-0">
+        <span class="font-bold text-slate-300 tracking-wider">Omni<span class="text-blue-500">PRO</span></span>
+        <span>·</span>
+        <span>The Proof of Performance Ledger</span>
+      </div>
+      <div class="flex space-x-6 font-mono">
+        <a href="/pop-oracle" class="hover:text-slate-300 transition">Simulator</a>
+        <a href="#metadata" class="hover:text-slate-300 transition">DDEX Specs</a>
+        <a href="mailto:kevin@0mnipro.io" class="hover:text-slate-300 transition">Contact Architect</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
